@@ -38,8 +38,15 @@ jobs:
         run: |
           allure generate reports/allure-results --clean -o reports/allure-report
 
+      - name: Verify Allure Report Exists
+        run: |
+          if [ ! -d "reports/allure-report" ]; then
+            echo "Allure report directory is missing!";
+            exit 1;
+          fi
+
       - name: Upload Allure Report
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: allure-report
           path: reports/allure-report
