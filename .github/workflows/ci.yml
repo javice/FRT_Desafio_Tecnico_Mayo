@@ -32,7 +32,7 @@ jobs:
 
       - name: Run tests with Allure
         run: |
-          make test
+          xvfb-run --auto-servernum --server-args='-screen 0 1920x1080x24' make test
 
       - name: Generate Allure Report
         run: |
