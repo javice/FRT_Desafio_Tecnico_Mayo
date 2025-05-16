@@ -32,14 +32,21 @@ jobs:
 
       - name: Run tests with Allure
         run: |
-          make test-headless
+          xvfb-run --auto-servernum --server-args='-screen 0 1920x1080x24' make test
 
       - name: Generate Allure Report
         run: |
           allure generate reports/allure-results --clean -o reports/allure-report
 
+      - name: Verify Allure Report Exists
+        run: |
+          if [ ! -d "reports/allure-report" ]; then
+            echo "Allure report directory is missing!";
+            exit 1;
+          fi
+
       - name: Upload Allure Report
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: allure-report
           path: reports/allure-report
