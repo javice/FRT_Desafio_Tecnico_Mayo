@@ -1,0 +1,78 @@
+# Entornos virtuales
+venv/
+env/
+.env/
+.venv/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.coverage
+*.egg
+*.egg-info/
+dist/
+build/
+eggs/
+parts/
+var/
+sdist/
+develop-eggs/
+.installed.cfg
+lib/
+lib64/
+
+# Reportes y resultados de pruebas
+reports/
+allure-results/
+allure-report/
+test-results/
+.pytest_cache/
+*.log
+screenshots/
+test-output/
+htmlcov/
+
+# IDEs y editores
+.idea/
+.vscode/
+*.swp
+*.swo
+.project
+.pydevproject
+.settings/
+*.sublime-workspace
+*.sublime-project
+
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db
+*.bak
+*.tmp
+*.temp
+
+# Archivos de configuración local
+local_config.py
+config.local.py
+*.local.py
+
+# Archivos temporales de Selenium
+geckodriver.log
+chromedriver.log
+ghostdriver.log
+
+# Archivos de dependencias
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Directorios de datos
+data/temp/
+data/test/
+data/local/
+
+# Archivos de credenciales
+credentials.json
+secrets.yaml
+.env
