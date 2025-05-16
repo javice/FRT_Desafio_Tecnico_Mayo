@@ -32,7 +32,7 @@ jobs:
 
       - name: Run tests with Allure
         run: |
-          make test-headless
+          make test
 
       - name: Generate Allure Report
         run: |
